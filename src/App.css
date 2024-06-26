@@ -1,38 +1,68 @@
+*{
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+  }
 .App {
-  text-align: center;
+  /* text-align: center; */
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.newParent{
+  background: rgb(183, 181, 181);
+  min-height:1rem;
+  margin-right: 3rem;
+  margin-left: 1rem;
+  flex:4;
+}
+.newTodo{
+  text-align: left;
+  background: rgb(95, 95, 237);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding:0.3rem;
+  cursor: pointer;
+}
+.movingOption{
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 1rem;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 1rem;
+  padding:0.3rem;
+  margin-top: 0.1rem;
+}
+.onGoingParent{
+  background: rgb(183, 181, 181);
+  min-height:1rem;
+  margin-right: 3rem;
+  flex:4;
+}
+.onGoingTodo{
+  text-align: left;
+  background: orange;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding:0.3rem;
+}
+.expireMsg{
+  color:red;
+  font-size: bold;
+}
+.doneParent{
+  background: rgb(183, 181, 181);
+  min-height:1rem;
+  margin-right: 2rem;
+  flex:4;
+}
+.doneTodo{
+  text-align: left;
+  background: green;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding:0.3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
