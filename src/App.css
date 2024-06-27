@@ -22,7 +22,6 @@ h1{
 .newParent{
   background: rgb(183, 181, 181);
   /* min-height:1rem; */
-  min-height:1rem;
   margin-right: 3rem;
   margin-left: 1rem;
   flex:4;
@@ -52,8 +51,7 @@ h1{
 }
 .onGoingParent{
   background: rgb(183, 181, 181);
- /*  min-height:1rem; */
-  min-height:1rem;
+  /* min-height:1rem; */
   margin-right: 3rem;
   flex:4;
 }
@@ -75,8 +73,7 @@ h1{
 }
 .doneParent{
   background: rgb(183, 181, 181);
-  /* min-height:1rem; */
-  min-height: 1rem;
+  /* min-height: 1rem; */
   margin-right: 1rem;
   flex:4;
 }
@@ -124,6 +121,33 @@ h2{
 }
 .cancelSaveContainer{
   margin-top: 0.5rem;
+  margin-left: 0.7rem;
+}
+.title{
+  margin-left: 0.7rem;
+}
+.desc{
+  margin-left: 0.7rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.inputTitle{
+  border:none;
+  border-radius: 0.5rem;
+  height:2rem;
+  width:96%;
+}
+.inputDesc{
+  border:none;
+  border-radius: 0.5rem;
+  height:2rem;
+  width:96%;
+}
+.inputDateTime{
+  border:none;
+  border-radius: 0.5rem;
+  height:2rem;
+  width:60%;
 }
 
 @media only screen and (max-width: 605px) {
