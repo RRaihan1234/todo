@@ -123,32 +123,8 @@ h2{
   margin-top: 0.5rem;
   margin-left: 0.7rem;
 }
-.title{
-  margin-left: 0.7rem;
-}
-.desc{
-  margin-left: 0.7rem;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
-}
-.inputTitle{
-  border:none;
-  border-radius: 0.5rem;
-  height:2rem;
-  width:96%;
-}
-.inputDesc{
-  border:none;
-  border-radius: 0.5rem;
-  height:2rem;
-  width:96%;
-}
-.inputDateTime{
-  border:none;
-  border-radius: 0.5rem;
-  height:2rem;
-  width:60%;
-}
+
+
 
 @media only screen and (max-width: 605px) {
   .App{

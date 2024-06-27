@@ -227,11 +227,11 @@ function App() {
                 <div className="formContent">
                     <div className="title">
                       <label>Todo Title : </label>
-                      <input type='text' className='inputTitle' required onChange={handleTitle} placeholder='Type Todo Title'/>
+                      <input type='text' required onChange={handleTitle} placeholder='Type Todo Title'/>
                     </div>
                     <div className='desc'>
                       <label>Todo Desc. : </label>
-                      <input type='text' className='inputDesc' required onChange={handleDesc} placeholder='Type Todo Description'/>
+                      <input type='text' required onChange={handleDesc} placeholder='Type Todo Description'/>
                     </div>
                     <div className="cancelSaveContainer">
                       <span onClick={handleCancel} className="cancelAdd">Cancel</span>
@@ -248,7 +248,7 @@ function App() {
                 <div className='onGoingTodo' key={item.id} onContextMenu={(e)=> handleOngoingContextMenu(e, item.id)}>
                     <h4>Title : {item.todoTitle}</h4>
                     <p>Description : {item.todoDesc}</p>
-                    <p>End Time : <input className="inputDateTime" type="datetime-local" onChange={(e)=>handleDateChange(e, item.id)} value={item.dateSelected?item.dateSelected:''}/></p>
+                    <p>End Time : <input type="datetime-local" onChange={(e)=>handleDateChange(e, item.id)} value={item.dateSelected?item.dateSelected:''}/></p>
                     {dateAndTime > new Date(item.dateSelected) && item.dateSelected && <p className="expireMsg">Overdue</p>}
                     {item.rightClick && <div className="movingOptionsParent">
                         <li className="movingOption" onClick={()=>handleMoveToNewfromOngoing(item.id)}>Move to New</li>
