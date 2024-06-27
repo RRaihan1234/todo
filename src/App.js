@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import uuid from 'react-uuid'
+import uuid from 'react-uuid';
 import './App.css';
 
 function App() {
@@ -205,73 +205,76 @@ function App() {
   }
 
   return (
-    <div className="App">
-       <div className="newParent">
-          <h2>New Todo</h2>
-          {newTodo.map((item)=>{
-            return(
-              <div className='newTodo' key={item.id} onContextMenu={(e)=> handleNewContextMenu(e, item.id)}>
-                  <h4>Title : {item.todoTitle}</h4>
-                  <p>Description : {item.todoDesc}</p>
-                  {item.rightClick && <div className="movingOptionsParent">
-                       <li className="movingOption" onClick={()=>handleMoveToOngoingfromNew(item.id)}>Move to Ongoing</li>
-                       <li className="movingOption" onClick={()=>handleMoveToDonefromNew(item.id)}>Move to Done</li>
-                  </div>}
-             </div>
-            )
-          })}
-          {showAddBtn && <button onClick={handleShowForm} className="addBtn">Add a Todo</button>}
-          {showForm &&  <form onSubmit={handleSubmit}>
-              <div className="formContent">
-                  <div>
-                    <label>Todo Title : </label>
-                    <input type='text' required onChange={handleTitle}/>
-                  </div>
-                  <div>
-                    <label>Todo Description : </label>
-                    <input type='text' required onChange={handleDesc}/>
-                  </div>
-                  <div className="cancelSaveContainer">
-                    <span onClick={handleCancel} className="cancelAdd">Cancel</span>
-                    <button type='submit' className="saveBtn">Save Todo</button>
-                  </div>
+    <div className="AppParent">
+       <h1>Todo List Application</h1>
+       <div className="App">
+        <div className="newParent">
+            <h2>New Todo</h2>
+            {newTodo.map((item)=>{
+              return(
+                <div className='newTodo' key={item.id} onContextMenu={(e)=> handleNewContextMenu(e, item.id)}>
+                    <h4>Title : {item.todoTitle}</h4>
+                    <p>Description : {item.todoDesc}</p>
+                    {item.rightClick && <div className="movingOptionsParent">
+                        <li className="movingOption" onClick={()=>handleMoveToOngoingfromNew(item.id)}>Move to Ongoing</li>
+                        <li className="movingOption" onClick={()=>handleMoveToDonefromNew(item.id)}>Move to Done</li>
+                    </div>}
               </div>
-          </form>}
-       </div>
+              )
+            })}
+            {showAddBtn && <button onClick={handleShowForm} className="addBtn">Add a Todo</button>}
+            {showForm &&  <form onSubmit={handleSubmit}>
+                <div className="formContent">
+                    <div>
+                      <label>Todo Title : </label>
+                      <input type='text' required onChange={handleTitle}/>
+                    </div>
+                    <div>
+                      <label>Todo Description : </label>
+                      <input type='text' required onChange={handleDesc}/>
+                    </div>
+                    <div className="cancelSaveContainer">
+                      <span onClick={handleCancel} className="cancelAdd">Cancel</span>
+                      <button type='submit' className="saveBtn">Save Todo</button>
+                    </div>
+                </div>
+            </form>}
+        </div>
 
-       <div className='onGoingParent'>
-          <h2>Ongoing Todo</h2>
-          {onGoingTodo.map((item)=>{
-            return(
-              <div className='onGoingTodo' key={item.id} onContextMenu={(e)=> handleOngoingContextMenu(e, item.id)}>
-                  <h4>Title : {item.todoTitle}</h4>
-                  <p>Description : {item.todoDesc}</p>
-                  <p>End Time : <input type="datetime-local" onChange={(e)=>handleDateChange(e, item.id)} value={item.dateSelected?item.dateSelected:''}/></p>
-                  {dateAndTime > new Date(item.dateSelected) && item.dateSelected && <p className="expireMsg">Overdue</p>}
-                  {item.rightClick && <div className="movingOptionsParent">
-                       <li className="movingOption" onClick={()=>handleMoveToNewfromOngoing(item.id)}>Move to New</li>
-                       <li className="movingOption" onClick={()=>handleMoveToDonefromOngoing(item.id)}>Move to Done</li>
-                  </div>}
-             </div>
-            )
-          })}
-       </div>
+        <div className='onGoingParent'>
+            <h2>Ongoing Todo</h2>
+            {onGoingTodo.map((item)=>{
+              return(
+                <div className='onGoingTodo' key={item.id} onContextMenu={(e)=> handleOngoingContextMenu(e, item.id)}>
+                    <h4>Title : {item.todoTitle}</h4>
+                    <p>Description : {item.todoDesc}</p>
+                    <p>End Time : <input type="datetime-local" onChange={(e)=>handleDateChange(e, item.id)} value={item.dateSelected?item.dateSelected:''}/></p>
+                    {dateAndTime > new Date(item.dateSelected) && item.dateSelected && <p className="expireMsg">Overdue</p>}
+                    {item.rightClick && <div className="movingOptionsParent">
+                        <li className="movingOption" onClick={()=>handleMoveToNewfromOngoing(item.id)}>Move to New</li>
+                        <li className="movingOption" onClick={()=>handleMoveToDonefromOngoing(item.id)}>Move to Done</li>
+                    </div>}
+              </div>
+              )
+            })}
+        </div>
 
-       <div className='doneParent'>
-          <h2>Done Todo</h2>
-          {doneTodo.map((item)=>{
-            return(
-              <div className='doneTodo' key={item.id} onContextMenu={(e)=> handleDoneContextMenu(e, item.id)}>
-                  <h4>Title : {item.todoTitle}</h4>
-                  <p>Description : {item.todoDesc}</p>
-                  {item.rightClick && <div className="movingOptionsParent">
-                       <li className="movingOption" onClick={()=>handleMoveToNewfromDone(item.id)}>Move to New</li>
-                       <li className="movingOption" onClick={()=>handleMoveToOnGoingfromDone(item.id)}>Move to Ongoing</li>
-                  </div>}
-             </div>
-            )
-          })}
-       </div>   
+        <div className='doneParent'>
+            <h2>Done Todo</h2>
+            {doneTodo.map((item)=>{
+              return(
+                <div className='doneTodo' key={item.id} onContextMenu={(e)=> handleDoneContextMenu(e, item.id)}>
+                    <h4>Title : {item.todoTitle}</h4>
+                    <p>Description : {item.todoDesc}</p>
+                    {item.rightClick && <div className="movingOptionsParent">
+                        <li className="movingOption" onClick={()=>handleMoveToNewfromDone(item.id)}>Move to New</li>
+                        <li className="movingOption" onClick={()=>handleMoveToOnGoingfromDone(item.id)}>Move to Ongoing</li>
+                    </div>}
+              </div>
+              )
+            })}
+        </div>   
+      </div>
     </div>
   );
 }

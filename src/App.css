@@ -3,13 +3,25 @@
   padding : 0;
   box-sizing: border-box;
   }
+h1{
+  text-align: center;
+  background:rgb(148, 147, 119);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  margin-bottom: -1.5rem;
+  text-decoration: underline;
+}
 .App {
+  background:rgb(148, 147, 119);
+  padding:1rem;
   display:flex;
   justify-content: space-around;
   margin-top: 1rem;
+  padding-top: 2rem;
 }
 .newParent{
   background: rgb(183, 181, 181);
+  /* min-height:1rem; */
   min-height:1rem;
   margin-right: 3rem;
   margin-left: 1rem;
@@ -23,6 +35,8 @@
   padding:0.3rem;
   cursor: pointer;
   color:white;
+  margin:1rem;
+  border-radius: 0.8rem;
 }
 .movingOption{
   list-style-type: none;
@@ -38,6 +52,7 @@
 }
 .onGoingParent{
   background: rgb(183, 181, 181);
+ /*  min-height:1rem; */
   min-height:1rem;
   margin-right: 3rem;
   flex:4;
@@ -50,6 +65,8 @@
   padding:0.3rem;
   cursor: pointer;
   color:white;
+  margin:1rem;
+  border-radius: 0.8rem;
 }
 .expireMsg{
   color:rgb(144, 35, 35);
@@ -58,7 +75,8 @@
 }
 .doneParent{
   background: rgb(183, 181, 181);
-  min-height:1rem;
+  /* min-height:1rem; */
+  min-height: 1rem;
   margin-right: 1rem;
   flex:4;
 }
@@ -70,6 +88,8 @@
   padding:0.3rem;
   cursor: pointer;
   color:white;
+  margin:1rem;
+  border-radius: 0.8rem;
 }
 h2{
   text-align: center;
@@ -79,7 +99,7 @@ h2{
   border-radius: 1rem;
   padding: 0.3rem;
   margin-bottom: 0.5rem;
-  margin-left: 0.5rem;
+  margin-left: 1.1rem;
   cursor:pointer;
 }
 .formContent{
@@ -124,3 +144,4 @@ h2{
     margin-right: 1rem;
   }
 }
+
