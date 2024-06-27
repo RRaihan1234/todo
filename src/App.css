@@ -4,10 +4,8 @@
   box-sizing: border-box;
   }
 .App {
-  /* text-align: center; */
   display:flex;
   justify-content: space-around;
-  flex-wrap: wrap;
 }
 .newParent{
   background: rgb(183, 181, 181);
@@ -107,4 +105,17 @@ h2{
   margin-top: 0.5rem;
 }
 
-
+@media only screen and (max-width: 605px) {
+  .App{
+    flex-direction: column;
+  }
+  .onGoingParent{
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+  .doneParent{
+    margin-top: 3rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+  }
+}

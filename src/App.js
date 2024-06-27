@@ -59,7 +59,7 @@ function App() {
           rightCilckedItem[0].rightClick = true;
         }
         setRender((prevState)=>!prevState);
-        console.log(newTodo)
+        
   }
 
   const handleMoveToOngoingfromNew = (id) => {
@@ -110,7 +110,6 @@ function App() {
         rightCilckedItem[0].rightClick = true;
       }
       setRender((prevState)=>!prevState);
-      console.log(onGoingTodo)
  }
 
   const handleMoveToNewfromOngoing = (id)=> {
@@ -158,7 +157,6 @@ function App() {
       rightCilckedItem[0].rightClick = true;
     }
     setRender((prevState)=>!prevState);
-    console.log(doneTodo)
  }
 
   const handleMoveToNewfromDone = (id) => {
