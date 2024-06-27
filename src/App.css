@@ -18,11 +18,12 @@
 }
 .newTodo{
   text-align: left;
-  background: rgb(95, 95, 237);
+  background: rgb(111, 111, 174);
   margin-bottom: 1rem;
   margin-top: 1rem;
   padding:0.3rem;
   cursor: pointer;
+  color:white;
 }
 .movingOption{
   list-style-type: none;
@@ -32,7 +33,9 @@
   background-color: white;
   border-radius: 1rem;
   padding:0.3rem;
-  margin-top: 0.1rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  color:black
 }
 .onGoingParent{
   background: rgb(183, 181, 181);
@@ -42,14 +45,17 @@
 }
 .onGoingTodo{
   text-align: left;
-  background: orange;
+  background: rgb(193, 138, 35);
   margin-bottom: 1rem;
   margin-top: 1rem;
   padding:0.3rem;
+  cursor: pointer;
+  color:white;
 }
 .expireMsg{
-  color:red;
-  font-size: bold;
+  color:rgb(144, 35, 35);
+  font-weight: bold;
+  text-align: center;
 }
 .doneParent{
   background: rgb(183, 181, 181);
@@ -59,10 +65,46 @@
 }
 .doneTodo{
   text-align: left;
-  background: green;
+  background: rgb(86, 149, 86);
   margin-bottom: 1rem;
   margin-top: 1rem;
   padding:0.3rem;
+  cursor: pointer;
+  color:white;
+}
+h2{
+  text-align: center;
+}
+.addBtn{
+  border:none;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  cursor:pointer;
+}
+.formContent{
+  margin-left: 0.5rem;
+}
+.cancelAdd{
+  background: rgb(230, 62, 62);
+  cursor:pointer;
+  border-radius: 0.5rem;
+  padding:0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.3rem;
+}
+.saveBtn{
+  border:none;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  cursor:pointer;
+  background:rgb(111, 205, 111)
+}
+.cancelSaveContainer{
+  margin-top: 0.5rem;
 }
 
 
