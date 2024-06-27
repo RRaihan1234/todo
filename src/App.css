@@ -122,11 +122,14 @@ h2{
 }
 
 
-
-@media only screen and (max-width: 605px) {
+@media only screen and (max-width: 660px) {
   .App{
     flex-direction: column;
   }
+}
+
+
+@media only screen and (max-width: 605px) {
   .newParent{
     margin-right: 1rem;
   }
