@@ -21,7 +21,6 @@ h1{
 }
 .newParent{
   background: rgb(183, 181, 181);
-  /* min-height:1rem; */
   margin-right: 3rem;
   margin-left: 1rem;
   flex:4;
@@ -51,7 +50,6 @@ h1{
 }
 .onGoingParent{
   background: rgb(183, 181, 181);
-  /* min-height:1rem; */
   margin-right: 3rem;
   flex:4;
 }
@@ -73,7 +71,6 @@ h1{
 }
 .doneParent{
   background: rgb(183, 181, 181);
-  /* min-height: 1rem; */
   margin-right: 1rem;
   flex:4;
 }
