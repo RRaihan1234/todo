@@ -227,11 +227,11 @@ function App() {
                 <div className="formContent">
                     <div>
                       <label>Todo Title : </label>
-                      <input type='text' required onChange={handleTitle}/>
+                      <input type='text' required onChange={handleTitle} placeholder='Type Todo Title'/>
                     </div>
                     <div>
-                      <label>Todo Description : </label>
-                      <input type='text' required onChange={handleDesc}/>
+                      <label>Todo Desc. : </label>
+                      <input type='text' required onChange={handleDesc} placeholder='Type Todo Description'/>
                     </div>
                     <div className="cancelSaveContainer">
                       <span onClick={handleCancel} className="cancelAdd">Cancel</span>
