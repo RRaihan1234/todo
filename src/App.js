@@ -11,7 +11,7 @@ function App() {
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');;
   const [, setRender] = useState(false);
-  const [dateAndTime, setDateAndTime] = useState(new Date());
+  const [dateAndTime, setDateAndTime] = useState(new Date())
     
   useEffect(()=>{
     let timer = setInterval(()=>{
